@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traductor Inglés Español</title>
+</head>
+
+<body>
+
+<h1>Traductor Inglés - Español</h1>
+
+<input id="palabra" placeholder="Escribe una palabra en inglés">
+
+<button onclick="traducir()">Traducir</button>
+
+<h2 id="resultado"></h2>
+
+<script>
+function traducir(){
+
+let texto = document.getElementById("palabra").value.toLowerCase();
+
+let diccionario = {
+    "hello":"hola",
+    "cat":"gato",
+    "dog":"perro",
+    "house":"casa",
+    "car":"carro"
+};
+
+if(diccionario[texto]){
+    document.getElementById("resultado").innerHTML = diccionario[texto];
+}
+else{
+    document.getElementById("resultado").innerHTML = "Palabra no encontrada";
+}
+
+}
+</script>
+
+</body>
+</html>
